@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Example changelog</title>
+<entry>
+  <title type="html">New model now available on AI Gateway</title>
+  <link rel="alternate" type="text/html" href="https://vercel.com/changelog/new-model"/>
+  <published>2026-09-22T09:30:00Z</published>
+  <updated>2026-09-22T10:00:00Z</updated>
+  <summary>You can now call the new model through the gateway with one line.</summary>
+</entry>
+</feed>

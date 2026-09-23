@@ -1,0 +1,32 @@
+# Daily AI news picker. Copy this file to .github/workflows/ai-news.yml in your
+# own repo. It runs once a day, writes news/YYYY-MM-DD.json and commits it.
+name: ai-news
+
+on:
+  schedule:
+    - cron: "30 23 * * *"   # 23:30 UTC = 07:30 in Kuala Lumpur (UTC+8)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  pick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Pick today's news
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          # raises the GitHub search rate limit
+          # NEWS_WEBHOOK_SECRET: ${{ secrets.NEWS_WEBHOOK_SECRET }}  # only if you use --webhook
+        run: npx --yes github:Rebelzxr/ai-news-picker --out news --explain --html
+      - name: Commit the day file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news
+          git diff --cached --quiet || git commit -m "news: $(date -u +%F)"
+          git push

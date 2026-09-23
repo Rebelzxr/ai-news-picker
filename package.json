@@ -1,0 +1,17 @@
+{
+  "name": "ai-news-picker",
+  "version": "1.0.0",
+  "description": "Pick 3-5 useful AI news items a day with plain code. No model needed.",
+  "type": "module",
+  "bin": { "ai-news-picker": "bin/ai-news-picker.mjs" },
+  "files": ["bin", "src", "config.json", "README.md", "LICENSE"],
+  "scripts": {
+    "start": "node bin/ai-news-picker.mjs",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" },
+  "keywords": ["ai", "news", "rss", "hacker-news", "github", "digest", "claude-code", "codex"],
+  "author": "Dainer (https://dainer-ai.vercel.app)",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/Rebelzxr/ai-news-picker.git" }
+}

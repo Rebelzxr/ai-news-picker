@@ -1,0 +1,4 @@
+node_modules/
+news/
+.DS_Store
+*.log

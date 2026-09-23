@@ -1,0 +1,52 @@
+{
+  "outDir": "./news",
+  "utcOffsetHours": 8,
+  "maxItems": 5,
+  "minItems": 3,
+  "qualityFloor": 2.2,
+  "repeatDays": 14,
+  "releaseWindowHours": 72,
+  "sectionCaps": { "releases": 2, "community": 2, "repos": 2, "voices": 1 },
+  "sectionBase": { "releases": 1.2, "repos": 0.7, "community": 0.6, "voices": 0.4 },
+  "officialDomains": [
+    "anthropic.com", "claude.com", "openai.com", "blog.google", "deepmind.google",
+    "developers.googleblog.com", "ai.google.dev", "perplexity.ai", "x.ai",
+    "github.blog", "huggingface.co", "mistral.ai", "ai.meta.com", "cursor.com",
+    "vercel.com", "supabase.com", "cloudflare.com", "n8n.io", "ollama.com"
+  ],
+  "coreSources": ["OpenAI", "Anthropic", "Claude", "Google", "Google DeepMind"],
+  "feeds": [
+    ["OpenAI", "https://openai.com/news/rss.xml"],
+    ["Google", "https://blog.google/technology/ai/rss/"],
+    ["Google DeepMind", "https://deepmind.google/blog/rss.xml"],
+    ["Google for Developers", "https://developers.googleblog.com/feeds/posts/default"],
+    ["GitHub", "https://github.blog/feed/"],
+    ["GitHub Changelog", "https://github.blog/changelog/feed/"],
+    ["Hugging Face", "https://huggingface.co/blog/feed.xml"],
+    ["Cloudflare", "https://blog.cloudflare.com/rss/"],
+    ["Vercel", "https://vercel.com/atom"],
+    ["Supabase", "https://supabase.com/rss.xml"],
+    ["n8n", "https://blog.n8n.io/rss/"],
+    ["Ollama", "https://ollama.com/blog/rss.xml"],
+    ["Cursor", "https://cursor.com/changelog/rss.xml"]
+  ],
+  "pages": [
+    { "source": "Anthropic", "page": "https://www.anthropic.com/news", "origin": "https://www.anthropic.com", "skip": "^/(news|research|company|careers|legal|learn|events|claude|api|transparency)?$" },
+    { "source": "Claude", "page": "https://claude.com/blog", "origin": "https://claude.com", "skip": "^/(blog|pricing|download|product(/.*)?)?$" }
+  ],
+  "hackerNews": { "enabled": true, "hours": 48, "minPoints": 40 },
+  "github": { "enabled": true, "createdWithinDays": 7, "minStars": 200, "keywords": ["ai", "llm", "agent", "mcp", "claude"] },
+  "trustedHandles": [
+    "claudedevs", "claudeai", "anthropicai", "openai", "openaidevs", "chatgptapp",
+    "googledeepmind", "googleaistudio", "geminiapp", "github", "vercel", "cursor_ai",
+    "huggingface", "ollama", "n8n_io", "perplexity_ai", "xai"
+  ],
+  "words": {
+    "ai": ["ai", "a\\.i\\.", "llm", "llms", "gpt", "openai", "anthropic", "claude", "gemini", "codex", "copilot", "cursor", "agent", "agents", "agentic", "mcp", "model", "models", "prompt", "rag", "inference", "transformer", "diffusion", "embedding", "fine-?tun", "ollama", "hugging ?face", "mistral", "llama", "deepseek", "qwen", "grok", "perplexity", "skill", "skills"],
+    "fit": ["claude", "chatgpt", "openai", "anthropic", "codex", "gemini", "cursor", "copilot", "agents?", "agentic", "mcp", "skills?", "workflows?", "automat\\w*", "open[- ]source", "self[- ]host\\w*", "local", "prompts?", "tutorial", "guide", "template", "no[- ]code", "n8n", "small business", "business", "api", "voice", "browser", "spreadsheet", "docs?", "invoice", "customer"],
+    "launch": ["introducing", "launch\\w*", "now available", "generally available", "release[sd]?", "new model", "announc\\w*", "update[sd]?", "ships?", "beta", "preview"],
+    "noise": ["lawsuit", "sues?", "sued", "stocks?", "shares", "ipo", "valuation", "raises? \\$", "funding round", "crypto", "bitcoin", "token sale", "election", "trump", "politic\\w*", "war", "layoffs?", "obituary", "safety report", "policy", "regulat\\w*", "hiring"],
+    "hype": ["\\d+\\s*[×x]\\s*(faster|cheaper|better)", "goldmine", "don'?t waste", "game[- ]?changer", "insane", "mind[- ]?blow", "🤯", "🚨"]
+  },
+  "webhook": { "url": "", "secretEnv": "NEWS_WEBHOOK_SECRET" }
+}

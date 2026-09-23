@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Example vendor</title>
+<item>
+  <title><![CDATA[Introducing Example Agents &amp; Skills]]></title>
+  <link>https://openai.com/index/example-agents</link>
+  <pubDate>Mon, 21 Sep 2026 16:00:00 GMT</pubDate>
+  <description><![CDATA[<p>Agents that run your <b>workflows</b> for you.</p> The post Example appeared first on Example Blog.]]></description>
+</item>
+<item>
+  <title>Second post with &#8220;quotes&#8221;</title>
+  <link>https://openai.com/index/second</link>
+  <pubDate>not a date</pubDate>
+  <description>Short.</description>
+</item>
+</channel></rss>

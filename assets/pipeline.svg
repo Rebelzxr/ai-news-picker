@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1040" width="720" height="1040" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>ai-news-picker pipeline</title>
+  <desc>Four collectors feed a plain-code scorer, which picks 3 to 5 items, reads each summary from its source, optionally polishes titles, then validates and writes a JSON day file.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#222724"/>
+    </marker>
+  </defs>
+  <rect width="720" height="1040" fill="#f5f3ed"/>
+
+  <text x="40" y="58" font-size="30" font-weight="700" fill="#222724">How one day of news gets picked</text>
+  <text x="40" y="92" font-size="20" fill="#5f655f">Plain code from top to bottom. No model needed.</text>
+
+  <!-- 1. collect -->
+  <text x="40" y="146" font-size="18" font-weight="700" fill="#c2410c" letter-spacing="2">1  COLLECT</text>
+  <g font-size="21" fill="#222724">
+    <rect x="40" y="162" width="310" height="76" rx="10" fill="#fff" stroke="#222724" stroke-width="2"/>
+    <text x="60" y="194" font-weight="700">Vendor feeds</text>
+    <text x="60" y="222" font-size="17" fill="#5f655f">13 RSS/Atom + 2 news pages</text>
+    <rect x="370" y="162" width="310" height="76" rx="10" fill="#fff" stroke="#222724" stroke-width="2"/>
+    <text x="390" y="194" font-weight="700">Hacker News</text>
+    <text x="390" y="222" font-size="17" fill="#5f655f">last 48h, AI stories only</text>
+    <rect x="40" y="252" width="310" height="76" rx="10" fill="#fff" stroke="#222724" stroke-width="2"/>
+    <text x="60" y="284" font-weight="700">GitHub search</text>
+    <text x="60" y="312" font-size="17" fill="#5f655f">new AI repos, by stars</text>
+    <rect x="370" y="252" width="310" height="76" rx="10" fill="#fff" stroke="#222724" stroke-width="2" stroke-dasharray="7 6"/>
+    <text x="390" y="284" font-weight="700">--extra file</text>
+    <text x="390" y="312" font-size="17" fill="#5f655f">X posts or any list (optional)</text>
+  </g>
+  <line x1="360" y1="336" x2="360" y2="372" stroke="#222724" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 2. score -->
+  <text x="40" y="402" font-size="18" font-weight="700" fill="#c2410c" letter-spacing="2">2  SCORE EVERY CANDIDATE</text>
+  <rect x="40" y="418" width="640" height="150" rx="10" fill="#fff" stroke="#222724" stroke-width="2"/>
+  <g font-size="19" fill="#222724">
+    <text x="62" y="452"><tspan font-weight="700">+</tspan> audience fit, momentum, freshness</text>
+    <text x="62" y="484"><tspan font-weight="700">+</tspan> launch words, the maker's own post</text>
+    <text x="62" y="516"><tspan font-weight="700" fill="#c2410c">−</tspan> noise words, hype, resellers of the same story</text>
+    <text x="62" y="548"><tspan font-weight="700" fill="#c2410c">×</tspan> skip any link used in the last 14 days</text>
+  </g>
+  <line x1="360" y1="576" x2="360" y2="612" stroke="#222724" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 3. pick -->
+  <text x="40" y="642" font-size="18" font-weight="700" fill="#c2410c" letter-spacing="2">3  PICK 3 TO 5</text>
+  <rect x="40" y="658" width="640" height="118" rx="10" fill="#fff" stroke="#222724" stroke-width="2"/>
+  <g font-size="19" fill="#222724">
+    <text x="62" y="692">Caps per section, one release per vendor,</text>
+    <text x="62" y="722">one pick per story. Each summary is read from</text>
+    <text x="62" y="752">the source itself; a dead link drops the pick.</text>
+  </g>
+  <line x1="360" y1="784" x2="360" y2="820" stroke="#222724" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 4. polish + write -->
+  <text x="40" y="850" font-size="18" font-weight="700" fill="#c2410c" letter-spacing="2">4  POLISH (OPTIONAL) AND WRITE</text>
+  <rect x="40" y="866" width="300" height="130" rx="10" fill="#fff" stroke="#222724" stroke-width="2" stroke-dasharray="7 6"/>
+  <g font-size="19" fill="#222724">
+    <text x="60" y="900" font-weight="700">--polish-cmd</text>
+    <text x="60" y="930" font-size="17" fill="#5f655f">rewrites titles and summaries;</text>
+    <text x="60" y="956" font-size="17" fill="#5f655f">new numbers, hype or bad lengths</text>
+    <text x="60" y="982" font-size="17" fill="#5f655f">fall back to plain text</text>
+  </g>
+  <line x1="344" y1="931" x2="372" y2="931" stroke="#222724" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="380" y="866" width="300" height="130" rx="10" fill="#222724"/>
+  <g font-size="19" fill="#f5f3ed">
+    <text x="400" y="900" font-weight="700">YYYY-MM-DD.json</text>
+    <text x="400" y="930" font-size="17">validated day file</text>
+    <text x="400" y="956" font-size="17">+ optional .html preview</text>
+    <text x="400" y="982" font-size="17">+ optional webhook POST</text>
+  </g>
+</svg>

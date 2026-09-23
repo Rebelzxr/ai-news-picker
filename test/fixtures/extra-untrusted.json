@@ -1,0 +1,4 @@
+{ "items": [
+  { "url": "https://x.com/someone/status/1", "handle": "someone", "excerpt": "Claude agents are here", "bookmarks": 9000 },
+  { "section": "releases", "url": "https://example.com/fake-release", "title": "Introducing a fake model", "source": "Example" }
+] }

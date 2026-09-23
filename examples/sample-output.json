@@ -1,0 +1,64 @@
+{
+  "date": "2026-09-23",
+  "items": [
+    {
+      "section": "releases",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "source": "Anthropic",
+      "date": "2026-09-22",
+      "summary": "Claude Opus 5.5 leads in agentic coding and knowledge work, and costs 40% less to run than Opus 5 on typical workloads.",
+      "tools": [
+        "claude"
+      ]
+    },
+    {
+      "section": "repos",
+      "url": "https://github.com/kerpopule/hermes-jev-skills",
+      "title": "kerpopule/hermes-jev-skills",
+      "source": "GitHub",
+      "date": "2026-09-23",
+      "summary": "Jev-powered model routing, memory, compaction, skill selection, computer and browser use for Hermes agents (also Claude Code and Codex) (679 stars on GitHub.)",
+      "tools": [
+        "claude",
+        "codex",
+        "github",
+        "open-source"
+      ]
+    },
+    {
+      "section": "releases",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+      "title": "Introducing GPT-6 Sol and Luna",
+      "source": "OpenAI",
+      "date": "2026-09-23",
+      "summary": "Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.",
+      "tools": [
+        "chatgpt"
+      ]
+    },
+    {
+      "section": "repos",
+      "url": "https://github.com/wuyoscar/jev-skill",
+      "title": "wuyoscar/jev-skill",
+      "source": "GitHub",
+      "date": "2026-09-23",
+      "summary": "An awesome collection of Jev use cases, workflows, and agent skills. (456 stars on GitHub.)",
+      "tools": [
+        "github",
+        "open-source"
+      ]
+    },
+    {
+      "section": "community",
+      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+      "title": "Claude Code reads AGENTS.md only when telemetry is on",
+      "source": "Hacker News",
+      "date": "2026-09-23",
+      "summary": "Claude Code 2.1.277 added AGENTS.md support, but the loader sits behind a remote feature flag. With telemetry or nonessential traffic turned off, a local AGENTS.md is skipped without a warning. This is what I measured and the one-line…",
+      "tools": [
+        "claude"
+      ]
+    }
+  ]
+}
