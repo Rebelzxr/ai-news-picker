@@ -11,7 +11,7 @@
   },
   "engines": { "node": ">=20" },
   "keywords": ["ai", "news", "rss", "hacker-news", "github", "digest", "claude-code", "codex"],
-  "author": "Dainer (https://dainer-ai.vercel.app)",
+  "author": "Dainer (https://dainer-ai.biz)",
   "license": "MIT",
   "repository": { "type": "git", "url": "https://github.com/Rebelzxr/ai-news-picker.git" }
 }

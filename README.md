@@ -9,7 +9,7 @@
 [![Works with Claude Code and Codex](https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20Codex-c2410c.svg)](#optional-polish-step)
 [![Last update](https://img.shields.io/badge/updated-2026--09--23-222724.svg)](examples/sample-output.json)
 
-Built for the news page on [dainer.ai](https://dainer-ai.vercel.app/news).
+Built for the news page on [dainer-ai.biz](https://dainer-ai.biz/news).
 
 <img src="assets/html-preview.png" alt="Preview page written by --html from a real run on 23 Sep 2026" width="100%">
 
@@ -56,14 +56,14 @@ First thing to try: run with `--dry-run --explain`, read why each item scored wh
 <td width="50%"><a href="examples/sample-output.json"><b>examples/sample-output.json</b></a><br><b>The actual day file.</b><br>Five picks from the same real run: two releases, two repos, one Hacker News story. The hero image above is its <code>--html</code> preview.</td>
 </tr>
 <tr>
-<td width="50%"><img src="assets/news-desktop.png" alt="dainer.ai news page on 23 Sep 2026, before the switch to this method"><br><b>The page this feeds (before the switch).</b><br>dainer.ai/news on 23 Sep 2026. These items were still picked and summarised by Codex in the older pipeline.</td>
-<td width="50%"><img src="assets/news-mobile.png" alt="dainer.ai news page on a phone, 23 Sep 2026, before the switch" width="60%"><br><b>Same page on a phone (before the switch).</b><br>Also from the older pipeline. From 24 Sep the page reads day files made by this scoring and picking.</td>
+<td width="50%"><img src="assets/news-desktop.png" alt="dainer-ai.biz news page on 23 Sep 2026, before the switch to this method"><br><b>The page this feeds (before the switch).</b><br>dainer-ai.biz/news on 23 Sep 2026. These items were still picked and summarised by Codex in the older pipeline.</td>
+<td width="50%"><img src="assets/news-mobile.png" alt="dainer-ai.biz news page on a phone, 23 Sep 2026, before the switch" width="60%"><br><b>Same page on a phone (before the switch).</b><br>Also from the older pipeline. From 24 Sep the page reads day files made by this scoring and picking.</td>
 </tr>
 </table>
 
 ## Real use
 
-[dainer.ai/news](https://dainer-ai.vercel.app/news) switched to this plain-code method on 23 Sep 2026. The first live run is on 24 Sep at 07:30 Malaysia time. Before that, the page's items were picked and summarised by Codex in an older pipeline, and the screenshots in the gallery show that older version.
+[dainer-ai.biz/news](https://dainer-ai.biz/news) switched to this plain-code method on 23 Sep 2026. The first live run is on 24 Sep at 07:30 Malaysia time. Before that, the page's items were picked and summarised by Codex in an older pipeline, and the screenshots in the gallery show that older version.
 
 The site version reads a private collection folder filled by other jobs. This repo is the same scoring and picking made standalone, with public collectors (vendor feeds, Hacker News, GitHub) and the `--extra` input in place of that folder, so it works on any machine.
 
@@ -265,7 +265,7 @@ ai-news-picker/
 
 MIT licence, see [LICENSE](LICENSE). Copyright (c) 2026 Dainer.
 
-Built for [dainer.ai](https://dainer-ai.vercel.app). No third-party code is included. It calls these public services:
+Built for [dainer-ai.biz](https://dainer-ai.biz). No third-party code is included. It calls these public services:
 
 - [Hacker News Search API](https://hn.algolia.com/api) by Algolia
 - [GitHub REST API](https://docs.github.com/en/rest)
@@ -275,6 +275,6 @@ Built for [dainer.ai](https://dainer-ai.vercel.app). No third-party code is incl
 
 Made by Dainer in Kuala Lumpur, who builds AI systems for real work and writes about how they run.
 
-- Site: [dainer-ai.vercel.app](https://dainer-ai.vercel.app)
-- Daily AI news: [dainer-ai.vercel.app/news](https://dainer-ai.vercel.app/news)
-- The library: [dainer-ai.vercel.app/library](https://dainer-ai.vercel.app/library)
+- Site: [dainer-ai.biz](https://dainer-ai.biz)
+- Daily AI news: [dainer-ai.biz/news](https://dainer-ai.biz/news)
+- The library: [dainer-ai.biz/library](https://dainer-ai.biz/library)
